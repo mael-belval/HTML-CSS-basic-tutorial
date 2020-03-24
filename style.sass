@@ -23,6 +23,7 @@ header
 
     nav
         margin: 1rem
+        margin-right: 10rem
 
         ul
             list-style-type: none
@@ -32,9 +33,28 @@ header
                 margin-left: 1rem
                 cursor: pointer
 
+                div.detail
+                    display: none
+                    position: absolute
+                    top: 1.5rem
+                    padding: 5px
+                    min-width: 100%
+                    width: max-content
+
+                    ul
+                        display: block
+                        padding-left: 0
+
+                        li
+                            margin: 0
+
             li:hover
                 position: relative
                 top: -5px
+
+                div.detail
+                    display: block
+                    background-color: #444
 
 main
     position: absolute
