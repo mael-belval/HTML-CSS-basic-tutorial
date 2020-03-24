@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css"> <!-- Classic normalize for lazy CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Generated CSS -->
     <title>Exposé SI28 - HTML/CSS</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
-    <link rel="stylesheet" href="https://use.typekit.net/jvx6bxh.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css"> <!-- Syntax coloration style -->
+    <link rel="stylesheet" href="https://use.typekit.net/jvx6bxh.css"> <!-- Custom font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Navigation icons -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script> <!-- Syntax coloration script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery for lazy JS -->
 </head>
 <body>
-    <header>
+    <header> <!-- Presentation section, with chapter selection -->
         <h1>Exposé SI28 - HTML/CSS</h1>
         <nav>
             <ul>
@@ -24,7 +24,7 @@
         </nav>
     </header>
     <main>
-        <article>
+        <article> <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
             <h2>Test slide</h2>
             <p>contenu</p>
         </article>
@@ -32,8 +32,8 @@
             <h2>Test slide 2</h2>
             <p>contenu 2</p>
         </article>
-        <aside class="hidden">
-            <ul id="tree">
+        <aside class="hidden"> <!-- Hidden code, will be used later in the presentation -->
+            <ul id="tree"> <!-- Html as a tree, for a latter use -->
                 <li>!DOCTYPE html</li>
                 <li><span class="caret">html lang</span>
                     <ul class="nested">
@@ -85,7 +85,7 @@
                 </li>
             </ul>
 
-            <pre><code class="html">
+            <pre><code class="html"> <!-- HTML5 template formatted code -->
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;fr&quot;&gt;
     &lt;head&gt;
@@ -128,7 +128,7 @@
             </code></pre>
         </aside>
     </main>
-    <footer>
+    <footer> <!-- Navigation button -->
         <nav>
             <i class="material-icons" id="start_btn">skip_previous</i>
             <i class="material-icons" id="prev_btn">navigate_before</i>
@@ -137,7 +137,7 @@
         </nav>
     </footer>
     
-    <script>
+    <script> // Code for the tree
         var toggler = document.getElementsByClassName("caret");
         var i;
         
@@ -148,7 +148,7 @@
             });
         } 
     </script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="script.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script> <!-- Syntax coloration -->
+    <script src="script.js"></script> <!-- Navigation script -->
 </body>
 </html>
