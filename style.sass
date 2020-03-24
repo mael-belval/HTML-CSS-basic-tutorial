@@ -1,0 +1,94 @@
+.hidden
+    display: none
+
+body
+    font-family: novel-mono-pro-extra-compres, sans-serif
+    font-weight: 200
+    font-style: normal
+    margin: 0
+    padding: 0
+
+header
+    display: flex
+    color: #fff
+    background-color: #222
+    width: 100%
+    justify-content: space-between
+
+    h1
+        font-family: novel-mono-pro, sans-serif
+        font-weight: 800
+        font-style: italic
+        margin: 1rem
+
+    nav
+        margin: 1rem
+
+        ul
+            list-style-type: none
+            display: flex
+
+            li
+                margin-left: 1rem
+                cursor: pointer
+
+            li:hover
+                position: relative
+                top: -5px
+
+main
+    position: absolute
+    left: 0
+    top: 0
+    width: 100vw
+    height: 100%
+    background: #ddd
+    z-index: -1
+    display: flex
+
+    article
+        width: 1024px
+        height: 768px
+        background-color: #fff
+        margin: auto
+
+footer
+    width: 100%
+    position: absolute
+    background-color: #888
+    top: 95vh
+    left: 0
+    height: 5vh
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: default
+
+    i
+        cursor: pointer
+
+#tree
+    ul, #tree
+        list-style-type: none
+
+    margin: 0
+    padding: 0
+  
+    .caret
+        cursor: pointer
+        user-select: none
+
+    .caret::before
+        content: "\25B6"
+        color: black
+        display: inline-block
+        margin-right: 6px
+
+    .caret-down::before
+        transform: rotate(90deg)
+
+    .nested
+        display: none
+
+    .active
+        display: block
