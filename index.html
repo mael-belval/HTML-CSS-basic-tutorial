@@ -141,8 +141,190 @@
                 </p>
             </div>
         </article>
+        <article>
+            <div class="slide-title">L'historique du CSS</div>
+            <div class="long-text">
+                <p>CSS (Cascading Style Sheets ou en français "Feuilles de style en cascade") est utilisé pour styliser
+                    et
+                    mettre en page des pages Web - par exemple, pour modifier la police, la couleur, la taille et
+                    l'espacement de votre contenu, le scinder en plusieurs colonnes ou ajouter des animations et autres
+                    éléments décoratifs. Ce module vous permet de commencer en douceur votre chemin vers la maîtrise de
+                    CSS
+                    avec les bases de son fonctionnement, de sa syntaxe et de la façon dont vous pouvez commencer à
+                    l'utiliser pour ajouter du style au HTML.
+                </p>
+            </div>
 
+        </article>
+        <article>
+            <div class="slide-title">Ajouter CSS à notre document</div>
+            <div class="long-text">
+                <p>Pour commencer, on doit signaler au document HTML qu'on souhaite utiliser des règles CSS. Vous
+                    rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de
+                    présenter la méthode la plus utilisée qui est aussi la plus utile — créer un lien vers la feuille de
+                    style CSS depuis l'en-tête du document HTML.
+                </p>
+                <p>
+                    Avec votre éditeur de code, dans le dossier où se trouve le document HTML, créez un fichier et
+                    sauvez le sous le nom styles.css. L'extension .css indique que c'est un fichier CSS.
+                </p>
+                <p>
+                    Pour lier styles.css à index.html ajoutez la ligne suivante dans la section
+                    <code>&lt;head&gt;</code> du document HTML :
+                </p>
+                <p style="text-align: center;">
+                    <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+                </p>
+                <p>Cet élément <code>&lt;link&gt;</code> indique au navigateur la présence d'une feuille de style, grâce
+                    à l'attribut
+                    <code>rel</code> ; la valeur de l'attribut href donne la localisation du fichier CSS.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">La propriété "display"</div>
+            <div class="long-text">
+                <p>
+                    La propriété CSS display est la plus importante pour contrôler la mise en page. Chaque élément a une
+                    valeur display par défaut dépendante du type de l'élément. Les valeurs par défaut de la plupart des
+                    éléments sont block ou inline. Un élément block est souvent appelé un élément block-level. Un
+                    élément inline n'est jamais appelé autrement qu'un élément inline.
+                </p>
+                <h2>block</h2>
+                <p style="border: 2px solid black;">
+                    div est l'élément block-level standard. Un élément block-level commence sur une nouvelle ligne et
+                    s'étire autant qu'il peut sur la gauche et la droite. D'autres éléments block-level courant sont p
+                    et form, et les nouveaux en HTML5 sont header, footer, section, et plus.
+                </p>
+                <h2>inline</h2>
+                <p>
+                    <code>span</code> est l'élément inline standard. Un élément inline peut encadrer du texte dans un
+                    paragraphe <span><code>&lt;span&gt;comme ceci &lt;span&gt;</code></span> sans
+                    interrompre le flux de ce paragraphe. L'élément <code>a</code> est l'élément
+                    inline le plus courant, puisque vous l'utilisez pour vos liens.
+                </p>
+                <h2>none</h2>
+                <p>
+                    Une autre valeur display courante est <code>none</code>. Quelques éléments spéciaux comme
+                    <code>script</code> l'utilisent par
+                    défaut. <code>display: none;</code> est très utile pour masquer ou afficher facilement des éléments
+                    en CSS ou en
+                    Javascripts sans avoir à les supprimer et les recréer dans le DOM.
+                </p>
+                <p>
+                    La différence entre <code>display: none;</code> et <code>visibility: hidden;</code> est que
+                    <code>display: none; </code> masque totalement l'élément et annule des propriétés telles que margin,
+                    padding, width, height...tandis que <code>visibility: hidden;</code> masque seulement l'élément, ce
+                    qui peut laisser des espaces vides.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <p>
+                    Pour des mise en page plus complexes, nous devons parler de la propriété CSS <code>position</code>.
+                    Elle a plusieurs
+                    valeurs possibles.
+                </p>
+                <h2>static</h2>
+                <pre>
+                    .static{
+                        posision: static;
+                    }
+                </pre>
+                <p style="position: static; border: 5px solid green;">
+                    <code class="code_title">&lt;div class=&quot;static&quot;&gt;</code> <br>
+                    static est la valeur par défaut de tous les éléments. Un élément avec <code>position: static;</code>
+                    n'est positionné d'aucune manière spéciale. Un élément static est dit non positionné et un élément
+                    avec une propriété position ayant une valeur autre que static est dit positionné.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <h2>relative</h2>
+                <pre>
+                    .relative1 {
+                        position: relative;
+                    }
+                    .relative2 {
+                    position: relative;
+                    top: -30px;
+                    left: 30px;
+                    background-color: white;
+                    width: 500px;
+                    }
+                </pre>
+                <p class="relative1" style="border: 5px solid green;">
+                    <code class="code_title">&lt;div class=&quot;relative1&quot;&gt;</code><br>
+                    relative se comporte de la même façon que static sauf si vous ajoutez quelques propriétés en plus.
+                    <br><br>
+                </p>
+                <p class="relative2" style="border: 5px solid purple;">
+                    <code class="code_title">&lt;div class=&quot;relative2&quot;&gt;</code><br>
+                    Ajouter les propriétés <code>top</code> ,<code>right</code> , <code>bottom</code> et
+                    <code>left</code> à un élément positionné en relative va le placer ailleurs que sa position normale.
+                    Le reste du contenu ne sera pas ajusté pour prendre la place dans l'espace laissé par l'élément.
+                </p>
+            </div>
+        </article>
 
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <h2>fixed</h2>
+                <p>Un élément positionné en fixed est positionné par rapport a la fenêtre du navigateur, ce qui signifie
+                    qu'il reste toujours à la même place même si la page défile. De la même manière qu'avec un élément
+                    positionné en relative, nous pouvons utiliser les propriétés <code>top</code>, <code>right</code>,
+                    <code>bottom</code> et <code>left</code>.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <p>
+                    <code>absolute</code> est la valeur la plus délicate. <code>absolute</code> se comporte comme fixed
+                    sauf que son positionnement
+                    est relatif à l'élément parent positionné le plus proche au lieu d'être relatif à la fenêtre du
+                    navigateur. Si un élément positionné en absolute n'à aucun élément parent positionné, il utilise le
+                    corps du document et se déplace avec le document au défilement de la page. N'oubliez-pas qu'un
+                    élément
+                    "positionné" est un élément dont la position est tout sauf <code>static</code>.
+                </p>
+                <p>
+                    Voici un exemple simple :
+                </p>
+                <pre>
+                    .relative {
+                        position: relative;
+                        width: 600px;
+                        height: 400px;
+                      }
+                      .absolute {
+                        position: absolute;
+                        top: 120px;
+                        right: 0;
+                        width: 300px;
+                        height: 200px;
+                      }
+                </pre>
+                <div class="relative" style="border: 4px solid green;">
+                    <code class="code_title">&lt;div class=&quot;relative&quot;&gt;</code><br>
+                    Cet élément est positionné en relative. S'il était positionné en <code>position: static;</code> son élément
+                    enfant positionné en absolute s'échapperait et serait positionné de manière relative au corps du
+                    document.
+                    <div class="absolute" style="border: 4px solid purple;">
+                        <code class="code_title">&lt;div class=&quot;absolute&quot;&gt;</code><br>
+                        Cet élément est positionné en absolute. Sa position est relative à son parent.
+                    </div>
+                </div>
+                
+
+            </div>
+        </article>
         <aside class="hidden">
             <!-- Hidden code, will be used later in the presentation -->
             <ul id="tree">
