@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css"> <!-- Classic normalize for lazy CSS -->
     <link rel="stylesheet" href="style.css"> <!-- Generated CSS -->
     <title>Exposé SI28 - HTML/CSS</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css"> <!-- Syntax coloration style -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+    <!-- Syntax coloration style -->
     <link rel="stylesheet" href="https://use.typekit.net/jvx6bxh.css"> <!-- Custom font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Navigation icons -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script> <!-- Syntax coloration script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery for lazy JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <!-- Syntax coloration script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JQuery for lazy JS -->
 </head>
+
 <body>
-    <header> <!-- Presentation section, with chapter selection -->
+    <header>
+        <!-- Presentation section, with chapter selection -->
         <h1>Exposé SI28 - HTML/CSS</h1>
         <nav>
             <ul>
@@ -48,7 +54,8 @@
         </nav>
     </header>
     <main>
-        <article> <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
+        <article>
+            <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
             <h2>Test slide</h2>
             <p>contenu</p>
         </article>
@@ -56,8 +63,90 @@
             <h2>Test slide 2</h2>
             <p>contenu 2</p>
         </article>
-        <aside class="hidden"> <!-- Hidden code, will be used later in the presentation -->
-            <ul id="tree"> <!-- Html as a tree, for a latter use -->
+
+        <article>
+            <div class="slide-title">La petite histoire du HTML</div>
+            <div class="long-text">
+                <p>
+                    L'hypertexte Markup Language ou généralement abrégée «HTML» est un langage de balise permettant la
+                    création d'un site. Dans les années 1989-1990, un informaticien Tim Berners-Lee invente le Worl Wide
+                    Web. Le HTML est une des trois inventions issus du WWW avec le Hypertext Transfer Protocol (HTTP) et
+                    les
+                    adresses web. La première version du HTML comprend le titre du document, la structuration du texte
+                    en
+                    titres, sous-titres, listes ou texte brut, les hyperliens mais aussi un principe de référencement.
+                    Tim
+                    Berners Lee base le html sur le SGML (Standard Generalized Markup Language) qui est un langage
+                    généralisé des balises standardisées afin d'attirer les entreprise sur le html.
+                </p>
+                <p>
+                    À la fin des années 1993, le HTML qui est alors a sa version 1 voit un effet de normalisation. On
+                    l'appelle dorénavant HTML +. Malheureusement, jusqu'à la fin des années 1990 le html est défini par
+                    les
+                    implémentations des navigateurs. L'arrivé du navigateur NCSA Mosaic amène deux éléments majeurs :
+                    l'insertion des images et l'introduction des formulaires.
+                </p>
+                <p>
+                    Le 13 novembre 1993, l'apparition du nouveau navigateur Netscape Navigator 0.9 permet l'ajout de
+                    nombreux éléments : attributs de texte, centrage etc. Maintenant le html et les navigateurs prennent
+                    en
+                    compte le design et même élargissent ses capacités notamment avec le CSS. Le protocole décrivant
+                    HTML
+                    2.0 est finalisé à la fin de l'année 1995. Il décrit le HTML d'avant juin 1994 c'est à dire sans les
+                    nombreuses mise à jour dû au navigateur Netscape Navigator 0.9. Dan Conelly est le principal
+                    rédacteur
+                    de ce document.
+                </p>
+                <p>
+                    En décembre 1997 le W3C ( World Wide Web Consortium ) fondé par Tim Berners-Lee en 1994 publie le
+                    HTML4.0. Les principales nouveautés sont la séparation remarquable entre la structure et la
+                    présentation
+                    du document mais aussi la standardisation des éléments de style et des scripts. D' autres éléments
+                    sont
+                    ajoutés notamment la balise framset, transitional ou encore strict. Dans les années 2000, les
+                    informaticiens préfèrent s'atteler au XHTML et oublient le HTML. Ce n'est qu'en mars 2007 que la W3C
+                    décide de relancer le développement du html, avec à la tête des recherches Chris Wilson (Microsoft).
+                </p>
+            </div>
+
+
+        </article>
+
+        <article>
+            <div class="slide-title">L'historique du CSS</div>
+            <div class="long-text">
+                <p>Le CSS (Cascading Style Sheets : feuilles de style en cascade) est un langage informatique qui permet
+                    la
+                    mise en forme d'une page web. Créé par la W3C dans les années 1990 , il est totalement pris en
+                    charge
+                    par les navigateurs dans les annés 2000. La première réelle proposition de feuilles de style est
+                    proposée par Hakon Wium Lie. Très vite, Dave Raggett qui est alors le principal éditeur du projet de
+                    spécification HTML3 publie un document évoquant le travail de Hakon Wium Lie. La spécification CSS1
+                    finale est publiée le 17 décembre 1996. La première version du CSS ne permet pas une mise en page
+                    mais
+                    seulement une "mise en style" ( police,couleur, caractère...).
+                </p>
+                <p>
+                    En 1997, l'etude du CSS est confiée à une équipe du W3C presidé par Chris Lilley. Ce groupe contient
+                    des
+                    representants des plus grands navigateurs.
+                </p>
+                <p>
+                    C'est en mai 1998 que la seconde version du CSS, avec ses 70 nouvelles propriétés, apparaît. Des
+                    problèmes d'implémentation du CSS conduise le W3C à sortir en 2001 une version revue du CSS2. Le
+                    développement du CSS3 débute dès 1999. Cependant le développement est très difficile avec les
+                    problèmes
+                    de mise à jour et d'implémentation. L'évolution du CSS est constante et il a fallu plus de 10 années
+                    pour finaliser sa version 3.
+                </p>
+            </div>
+        </article>
+
+
+        <aside class="hidden">
+            <!-- Hidden code, will be used later in the presentation -->
+            <ul id="tree">
+                <!-- Html as a tree, for a latter use -->
                 <li>!DOCTYPE html</li>
                 <li><span class="caret">html lang</span>
                     <ul class="nested">
@@ -152,7 +241,8 @@
             </code></pre>
         </aside>
     </main>
-    <footer> <!-- Navigation button -->
+    <footer>
+        <!-- Navigation button -->
         <nav>
             <i class="material-icons" id="start_btn">skip_previous</i>
             <i class="material-icons" id="prev_btn">navigate_before</i>
@@ -160,13 +250,13 @@
             <i class="material-icons" id="end_btn">skip_next</i>
         </nav>
     </footer>
-    
+
     <script> // Code for the tree
         var toggler = document.getElementsByClassName("caret");
         var i;
-        
+
         for (i = 0; i < toggler.length; i++) {
-            toggler[i].addEventListener("click", function() {
+            toggler[i].addEventListener("click", function () {
                 this.parentElement.querySelector(".nested").classList.toggle("active");
                 this.classList.toggle("caret-down");
             });
@@ -175,4 +265,5 @@
     <script>hljs.initHighlightingOnLoad();</script> <!-- Syntax coloration -->
     <script src="script.js"></script> <!-- Navigation script -->
 </body>
+
 </html>
