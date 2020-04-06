@@ -112,6 +112,44 @@ main
             background: burlywood
         code
             background: #cfcfcf
+
+        .g2-2
+            display: grid
+            grid-template-columns: 1fr 1fr
+
+            div
+                text-align: center
+                height: 5rem
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all 0.5s
+
+            div, label
+                transition: all 0.5s
+
+            .hover-example:hover
+                font-size: 200%
+
+            input#transition-checked:checked ~ label
+                transform: rotate(180deg)
+
+            .rotate-constant
+                animation-iteration-count: infinite
+                animation-duration: 3s
+                animation-name: turnarround
+                animation-timing-function: linear
+
+            #fill-me-correctly-div
+                display: block
+
+            input#fill-me-correctly ~ p
+                transition: all 0.5s
+                opacity: 0
+
+            input#fill-me-correctly:valid ~ p
+                opacity: 1
+
         
 
 footer
@@ -132,7 +170,7 @@ footer
 #tree
     ul, #tree
         list-style-type: none
-        
+
     margin: 0
     padding: 0
 
@@ -154,3 +192,10 @@ footer
 
     .active
         display: block
+
+@keyframes turnarround
+    0%
+        transform: rotateY(0deg)
+    100%
+        transform: rotateY(360deg)
+        
