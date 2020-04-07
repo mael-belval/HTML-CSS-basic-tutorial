@@ -316,6 +316,45 @@
         </article>
 
         <article>
+            <div class="slide-title">Les sélecteurs CSS</div>
+            <div class="long-text">
+                <p>
+                    Il existe de nombreux sélecteurs en CSS, parmis ceux-là, on retrouve des sélecteurs très spécifiques,
+                    tels les sélecteurs de voisins directs.
+                </p>
+                <p>
+                    <code>div + .voisin</code> correspondra à tout les éléments avec
+                    la classe <code>voisin</code> suivant directement un <code>div</code>.
+                </p>
+                <p>
+                    <code>div ~ .voisins</code> correspondra à tout les éléments avec
+                    la classe <code>voisins</code> suivant directement <u>ou non</u> un <code>div</code>.
+                </p>
+                <p>
+                    <code>div > .fils</code> correspondra à tout les fils directs de <code>div</code> avec
+                    la classe <code>fils</code>.
+                </p>
+                <p>
+                    <code>div .fils</code> correspondra à tout les fils directs <u>ou non</u> de <code>div</code> avec
+                    la classe <code>fils</code>.
+                </p>
+                <p>
+                    <code>div:first-child</code> sélectionnera le premier enfant de <code>div</code>.
+                </p>
+                <p>
+                    <code>:empty</code> sélectionnera tout les éléments sans enfants.
+                </p>
+                <p>
+                    <code>:checked</code> sélectionnera tout les éléments "cochés" (<code>checkbox</code>,
+                    <code>radio</code>, <code>option</code> d'un <code>select</code>)
+                </p>
+                <p>
+                    Et bien plus encore. Vous pouvez les retrouver tous <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes">ICI</a>.
+                </p>
+            </div>
+        </article>
+
+        <article>
             <div class="slide-title">Les animations</div>
             <div class="long-text">Quelques exemples d'animations.</div>
             <div class="g2-2">
