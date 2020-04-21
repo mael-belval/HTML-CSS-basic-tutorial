@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css"> <!-- Classic normalize for lazy CSS -->
     <link rel="stylesheet" href="style.css"> <!-- Generated CSS -->
     <title>Exposé SI28 - HTML/CSS</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css"> <!-- Syntax coloration style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+    <!-- Syntax coloration style -->
     <link rel="stylesheet" href="https://use.typekit.net/jvx6bxh.css"> <!-- Custom font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Navigation icons -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script> <!-- Syntax coloration script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery for lazy JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <!-- Syntax coloration script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JQuery for lazy JS -->
 </head>
+
 <body>
-    <header> <!-- Presentation section, with chapter selection -->
+    <header>
+        <!-- Presentation section, with chapter selection -->
         <h1>Exposé SI28 - HTML/CSS</h1>
         <nav>
             <ul>
@@ -48,16 +54,476 @@
         </nav>
     </header>
     <main>
-        <article> <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
-            <h2>Test slide</h2>
-            <p>contenu</p>
+        <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
+        <article>
+            <div class="slide-title">La petite histoire du HTML</div>
+            <div class="long-text">
+                <p>
+                    L'hypertexte Markup Language ou généralement abrégée «HTML» est un langage de balise permettant la
+                    création d'un site. Dans les années 1989-1990, un informaticien Tim Berners-Lee invente le Worl Wide
+                    Web. Le HTML est une des trois inventions issus du WWW avec le Hypertext Transfer Protocol (HTTP) et
+                    les
+                    adresses web. La première version du HTML comprend le titre du document, la structuration du texte
+                    en
+                    titres, sous-titres, listes ou texte brut, les hyperliens mais aussi un principe de référencement.
+                    Tim
+                    Berners Lee base le html sur le SGML (Standard Generalized Markup Language) qui est un langage
+                    généralisé des balises standardisées afin d'attirer les entreprise sur le html.
+                </p>
+                <p>
+                    À la fin des années 1993, le HTML qui est alors a sa version 1 voit un effet de normalisation. On
+                    l'appelle dorénavant HTML +. Malheureusement, jusqu'à la fin des années 1990 le html est défini par
+                    les
+                    implémentations des navigateurs. L'arrivé du navigateur NCSA Mosaic amène deux éléments majeurs :
+                    l'insertion des images et l'introduction des formulaires.
+                </p>
+                <p>
+                    Le 13 novembre 1993, l'apparition du nouveau navigateur Netscape Navigator 0.9 permet l'ajout de
+                    nombreux éléments : attributs de texte, centrage etc. Maintenant le html et les navigateurs prennent
+                    en
+                    compte le design et même élargissent ses capacités notamment avec le CSS. Le protocole décrivant
+                    HTML
+                    2.0 est finalisé à la fin de l'année 1995. Il décrit le HTML d'avant juin 1994 c'est à dire sans les
+                    nombreuses mise à jour dû au navigateur Netscape Navigator 0.9. Dan Conelly est le principal
+                    rédacteur
+                    de ce document.
+                </p>
+                <p>
+                    En décembre 1997 le W3C ( World Wide Web Consortium ) fondé par Tim Berners-Lee en 1994 publie le
+                    HTML4.0. Les principales nouveautés sont la séparation remarquable entre la structure et la
+                    présentation
+                    du document mais aussi la standardisation des éléments de style et des scripts. D' autres éléments
+                    sont
+                    ajoutés notamment la balise framset, transitional ou encore strict. Dans les années 2000, les
+                    informaticiens préfèrent s'atteler au XHTML et oublient le HTML. Ce n'est qu'en mars 2007 que la W3C
+                    décide de relancer le développement du html, avec à la tête des recherches Chris Wilson (Microsoft).
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <div class="slide-title">L'historique du CSS</div>
+            <div class="long-text">
+                <p>Le CSS (Cascading Style Sheets : feuilles de style en cascade) est un langage informatique qui permet
+                    la
+                    mise en forme d'une page web. Créé par la W3C dans les années 1990 , il est totalement pris en
+                    charge
+                    par les navigateurs dans les annés 2000. La première réelle proposition de feuilles de style est
+                    proposée par Hakon Wium Lie. Très vite, Dave Raggett qui est alors le principal éditeur du projet de
+                    spécification HTML3 publie un document évoquant le travail de Hakon Wium Lie. La spécification CSS1
+                    finale est publiée le 17 décembre 1996. La première version du CSS ne permet pas une mise en page
+                    mais
+                    seulement une "mise en style" ( police,couleur, caractère...).
+                </p>
+                <p>
+                    En 1997, l'etude du CSS est confiée à une équipe du W3C presidé par Chris Lilley. Ce groupe contient
+                    des
+                    representants des plus grands navigateurs.
+                </p>
+                <p>
+                    C'est en mai 1998 que la seconde version du CSS, avec ses 70 nouvelles propriétés, apparaît. Des
+                    problèmes d'implémentation du CSS conduise le W3C à sortir en 2001 une version revue du CSS2. Le
+                    développement du CSS3 débute dès 1999. Cependant le développement est très difficile avec les
+                    problèmes
+                    de mise à jour et d'implémentation. L'évolution du CSS est constante et il a fallu plus de 10 années
+                    pour finaliser sa version 3.
+                </p>
+            </div>
         </article>
         <article>
-            <h2>Test slide 2</h2>
-            <p>contenu 2</p>
+            <div class="slide-title">L'historique du CSS</div>
+            <div class="long-text">
+                <p>CSS (Cascading Style Sheets ou en français "Feuilles de style en cascade") est utilisé pour styliser
+                    et
+                    mettre en page des pages Web - par exemple, pour modifier la police, la couleur, la taille et
+                    l'espacement de votre contenu, le scinder en plusieurs colonnes ou ajouter des animations et autres
+                    éléments décoratifs. Ce module vous permet de commencer en douceur votre chemin vers la maîtrise de
+                    CSS
+                    avec les bases de son fonctionnement, de sa syntaxe et de la façon dont vous pouvez commencer à
+                    l'utiliser pour ajouter du style au HTML.
+                </p>
+            </div>
+
         </article>
-        <aside class="hidden"> <!-- Hidden code, will be used later in the presentation -->
-            <ul id="tree"> <!-- Html as a tree, for a latter use -->
+        <article>
+            <div class="slide-title">Ajouter CSS à notre document</div>
+            <div class="long-text">
+                <p>Pour commencer, on doit signaler au document HTML qu'on souhaite utiliser des règles CSS. Vous
+                    rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de
+                    présenter la méthode la plus utilisée qui est aussi la plus utile — créer un lien vers la feuille de
+                    style CSS depuis l'en-tête du document HTML.
+                </p>
+                <p>
+                    Avec votre éditeur de code, dans le dossier où se trouve le document HTML, créez un fichier et
+                    sauvez le sous le nom styles.css. L'extension .css indique que c'est un fichier CSS.
+                </p>
+                <p>
+                    Pour lier styles.css à index.html ajoutez la ligne suivante dans la section
+                    <code>&lt;head&gt;</code> du document HTML :
+                </p>
+                <p style="text-align: center;">
+                    <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+                </p>
+                <p>Cet élément <code>&lt;link&gt;</code> indique au navigateur la présence d'une feuille de style, grâce
+                    à l'attribut
+                    <code>rel</code> ; la valeur de l'attribut href donne la localisation du fichier CSS.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">La propriété "display"</div>
+            <div class="long-text">
+                <p>
+                    La propriété CSS display est la plus importante pour contrôler la mise en page. Chaque élément a une
+                    valeur display par défaut dépendante du type de l'élément. Les valeurs par défaut de la plupart des
+                    éléments sont block ou inline. Un élément block est souvent appelé un élément block-level. Un
+                    élément inline n'est jamais appelé autrement qu'un élément inline.
+                </p>
+                <h2>block</h2>
+                <p style="border: 2px solid black;">
+                    div est l'élément block-level standard. Un élément block-level commence sur une nouvelle ligne et
+                    s'étire autant qu'il peut sur la gauche et la droite. D'autres éléments block-level courant sont p
+                    et form, et les nouveaux en HTML5 sont header, footer, section, et plus.
+                </p>
+                <h2>inline</h2>
+                <p>
+                    <code>span</code> est l'élément inline standard. Un élément inline peut encadrer du texte dans un
+                    paragraphe <span><code>&lt;span&gt;comme ceci &lt;span&gt;</code></span> sans
+                    interrompre le flux de ce paragraphe. L'élément <code>a</code> est l'élément
+                    inline le plus courant, puisque vous l'utilisez pour vos liens.
+                </p>
+                <h2>none</h2>
+                <p>
+                    Une autre valeur display courante est <code>none</code>. Quelques éléments spéciaux comme
+                    <code>script</code> l'utilisent par
+                    défaut. <code>display: none;</code> est très utile pour masquer ou afficher facilement des éléments
+                    en CSS ou en
+                    Javascripts sans avoir à les supprimer et les recréer dans le DOM.
+                </p>
+                <p>
+                    La différence entre <code>display: none;</code> et <code>visibility: hidden;</code> est que
+                    <code>display: none; </code> masque totalement l'élément et annule des propriétés telles que margin,
+                    padding, width, height...tandis que <code>visibility: hidden;</code> masque seulement l'élément, ce
+                    qui peut laisser des espaces vides.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <p>
+                    Pour des mise en page plus complexes, nous devons parler de la propriété CSS <code>position</code>.
+                    Elle a plusieurs
+                    valeurs possibles.
+                </p>
+                <h2>static</h2>
+                <pre>
+                    .static{
+                        posision: static;
+                    }
+                </pre>
+                <p style="position: static; border: 5px solid green;">
+                    <code class="code_title">&lt;div class=&quot;static&quot;&gt;</code> <br>
+                    static est la valeur par défaut de tous les éléments. Un élément avec <code>position: static;</code>
+                    n'est positionné d'aucune manière spéciale. Un élément static est dit non positionné et un élément
+                    avec une propriété position ayant une valeur autre que static est dit positionné.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <h2>relative</h2>
+                <pre>
+                    .relative1 {
+                        position: relative;
+                    }
+                    .relative2 {
+                        position: relative;
+                        top: -30px;
+                        left: 30px;
+                        background-color: white;
+                        width: 500px;
+                    }
+                </pre>
+                <p class="relative1" style="border: 5px solid green;">
+                    <code class="code_title">&lt;div class=&quot;relative1&quot;&gt;</code><br>
+                    relative se comporte de la même façon que static sauf si vous ajoutez quelques propriétés en plus.
+                    <br><br>
+                </p>
+                <p class="relative2" style="border: 5px solid purple;">
+                    <code class="code_title">&lt;div class=&quot;relative2&quot;&gt;</code><br>
+                    Ajouter les propriétés <code>top</code> ,<code>right</code> , <code>bottom</code> et
+                    <code>left</code> à un élément positionné en relative va le placer ailleurs que sa position normale.
+                    Le reste du contenu ne sera pas ajusté pour prendre la place dans l'espace laissé par l'élément.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <h2>fixed</h2>
+                <p>Un élément positionné en fixed est positionné par rapport a la fenêtre du navigateur, ce qui signifie
+                    qu'il reste toujours à la même place même si la page défile. De la même manière qu'avec un élément
+                    positionné en relative, nous pouvons utiliser les propriétés <code>top</code>, <code>right</code>,
+                    <code>bottom</code> et <code>left</code>.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">position</div>
+            <div class="long-text">
+                <p>
+                    <code>absolute</code> est la valeur la plus délicate. <code>absolute</code> se comporte comme fixed
+                    sauf que son positionnement
+                    est relatif à l'élément parent positionné le plus proche au lieu d'être relatif à la fenêtre du
+                    navigateur. Si un élément positionné en absolute n'à aucun élément parent positionné, il utilise le
+                    corps du document et se déplace avec le document au défilement de la page. N'oubliez-pas qu'un
+                    élément
+                    "positionné" est un élément dont la position est tout sauf <code>static</code>.
+                </p>
+                <p>
+                    Voici un exemple simple :
+                </p>
+                <pre>
+                    .relative {
+                        position: relative;
+                        width: 600px;
+                        height: 400px;
+                    }
+                    .absolute {
+                        position: absolute;
+                        top: 120px;
+                        right: 0;
+                        width: 300px;
+                        height: 200px;
+                    }
+                </pre>
+                <div class="relative" style="border: 4px solid green;">
+                    <code class="code_title">&lt;div class=&quot;relative&quot;&gt;</code><br>
+                    Cet élément est positionné en relative. S'il était positionné en <code>position: static;</code> son
+                    élément
+                    enfant positionné en absolute s'échapperait et serait positionné de manière relative au corps du
+                    document.
+                    <div class="absolute" style="border: 4px solid purple;">
+                        <code class="code_title">&lt;div class=&quot;absolute&quot;&gt;</code><br>
+                        Cet élément est positionné en absolute. Sa position est relative à son parent.
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="slide-title">float</div>
+            <div class="long-text">
+                <p>Une autre propriété CSS utilisée pour la mise en page est float.
+                    Float est prévu pour entourer une image avec du texte, comme ceci :
+                </p>
+
+                <pre>
+                    img {
+                        float: right;
+                        margin: 0 0 1em 1em;
+                    }
+                </pre>
+                <p class="thin">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQT_pmvrfR4g_-QH-Lh7fISrW0qisAp42Ge25HTbG2GaT8FGQXs&usqp=CAU"
+                        alt="image">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore architecto expedita a ipsam ducimus
+                    nihil hic asperiores accusantium ullam doloremque quisquam tempora modi, sunt dolore corporis totam
+                    esse, assumenda nisi. <br>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus repellendus animi nobis sed
+                    debitis pariatur nam itaque similique, blanditiis, id nostrum vero nihil, quis natus magnam expedita
+                    harum quibusdam aspernatur?<br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus architecto odio amet rem
+                    provident ducimus reprehenderit reiciendis accusantium facere molestiae culpa nulla, laboriosam
+                    debitis placeat corporis voluptas, qui mollitia magnam! <br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, eaque neque! Perferendis totam, illo
+                    magnam, sunt obcaecati, molestias repellendus voluptates possimus aut dolores quasi nemo. Excepturi
+                    amet odio sapiente incidunt.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">exemple de mise en page avec float</div>
+            <div class="long-text">
+                <p>C'est très courant de faire des mise en page entières en utilisant float. Voici une mise en page
+                    en utilisant float.
+                </p>
+                <pre>
+                    .clearfix {
+                        overflow: auto;
+                    }
+                    nav {
+                        float: left;
+                        width: 200px;
+                    }
+                    section {
+                        margin-left: 200px;
+                    }
+                </pre>
+                <code class="code_title"
+                    style="background: rgb(134, 208, 134);">&lt;div class=&quot;clearfix&quot;&gt;</code><br>
+                <div class="clearfix">
+                    <nav>
+                        <code class="code_title" style="background: pink;">&lt;nav&gt;</code><br>
+                        <li> <a href="http://papertoilet.com/" target="_blank">Gérer ses comptes</a> </li>
+                        <li> <a href="https://play2048.co/" target="_blank">Empunter</a></li>
+                        <li> <a href="http://radio.garden/visit/paris/B7DS4V1m">Assurer et sécuriser</a></li>
+                        <li> <a href="https://29a.ch/sandbox/2011/neonflames/">Épargner</a></li>
+                        <li> <a href="https://www.mapcrunch.com/">Nous contacter</a></li>
+                    </nav>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Remarquez que nous avons mis un clearfix sur le
+                        conteneur. Ce n'est pas nécessaire dans cet exemple, mais ça le serait si la <code>nav</code>
+                        était plus
+                        longue que le contenu non flottant
+                    </section>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae quidem reiciendis eum
+                        id! Nihil corporis eveniet reiciendis veniam dolorum ratione necessitatibus corrupti aperiam
+                        eligendi dolore nesciunt, soluta obcaecati aut.
+                    </section>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">Largeur en pourcent</div>
+            <div class="long-text">
+                <p>
+                    Le pourcent est une unité de mesure relative au block conteneur. C'est génial pour les images : ici
+                    nous avons une image qui a toujours 50% de la largeur de son conteneur. Essayez de réduire la taille
+                    de la page pour voir.
+                </p>
+                <pre>
+                    clearfix img {
+                        float: right;
+                        width: 50%;
+                    }
+                </pre>
+                <code class="code_title"
+                    style="background: rgb(134, 208, 134);">&lt;div class=&quot;clearfix&quot;&gt;</code><br>
+                <div class="clearfix">
+                    <img src="https://www.peta.org/wp-content/uploads/2017/11/iStock-805170532_absolutimages-668x336.jpg?20190103112626"
+                        alt="a cat">
+                    Vous pouvez même utiliser min-width et max-width pour limiter la largeur maximale ou minimale de
+                    l'image.
+                </div>
+
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">mise en page avec une largeur en pourcent</div>
+            <div class="long-text">
+                <p>Vous pouvez utiliser le pourcent pour votre mise en page, mais cela peut demander un peu de travail.
+                    Dans cet exemple, le contenu de la nav s'agence de manière désagréable quand la fenêtre est trop
+                    étroite. Cela se réduit à ce qui marche le mieux pour votre contenu.
+                </p>
+                <pre>
+                    nav {
+                        float: left;
+                        width: 25%;
+                    }
+                    section {
+                        margin-left: 25%;
+                    }
+                </pre>
+                <code class="code_title"
+                    style="background: rgb(134, 208, 134);">&lt;div class=&quot;container&quot;&gt;</code><br>
+                <div class="clearfix">
+                    <nav>
+                        <code class="code_title" style="background: pink;">&lt;nav&gt;</code><br>
+                        <li> <a href="http://papertoilet.com/" target="_blank">Gérer ses comptes</a> </li>
+                        <li> <a href="https://play2048.co/" target="_blank">Empunter</a></li>
+                        <li> <a href="http://radio.garden/visit/paris/B7DS4V1m">Assurer et sécuriser</a></li>
+                        <li> <a href="https://29a.ch/sandbox/2011/neonflames/">Épargner</a></li>
+                        <li> <a href="https://www.mapcrunch.com/">Nous contacter</a></li>
+                    </nav>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Quand cette mise en page est trop étroite, la nav est écrasée. Pire, vous ne pouvez pas utiliser
+                        <code>min-width</code> sur la nav pour empêcher cela, parce que la colonne de droite ne le respecterait pas.
+                    </section>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae quidem reiciendis eum
+                        id! Nihil corporis eveniet reiciendis veniam dolorum ratione necessitatibus corrupti aperiam
+                        eligendi dolore nesciunt, soluta obcaecati aut.
+                    </section>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="slide-title">Les sélecteurs CSS</div>
+            <div class="long-text">
+                <p>
+                    Il existe de nombreux sélecteurs en CSS, parmis ceux-là, on retrouve des sélecteurs très
+                    spécifiques,
+                    tels les sélecteurs de voisins directs.
+                </p>
+                <p>
+                    <code>div + .voisin</code> correspondra à tout les éléments avec
+                    la classe <code>voisin</code> suivant directement un <code>div</code>.
+                </p>
+                <p>
+                    <code>div ~ .voisins</code> correspondra à tout les éléments avec
+                    la classe <code>voisins</code> suivant directement <u>ou non</u> un <code>div</code>.
+                </p>
+                <p>
+                    <code>div > .fils</code> correspondra à tout les fils directs de <code>div</code> avec
+                    la classe <code>fils</code>.
+                </p>
+                <p>
+                    <code>div .fils</code> correspondra à tout les fils directs <u>ou non</u> de <code>div</code> avec
+                    la classe <code>fils</code>.
+                </p>
+                <p>
+                    <code>div:first-child</code> sélectionnera le premier enfant de <code>div</code>.
+                </p>
+                <p>
+                    <code>:empty</code> sélectionnera tout les éléments sans enfants.
+                </p>
+                <p>
+                    <code>:checked</code> sélectionnera tout les éléments "cochés" (<code>checkbox</code>,
+                    <code>radio</code>, <code>option</code> d'un <code>select</code>)
+                </p>
+                <p>
+                    Et bien plus encore. Vous pouvez les retrouver tous <a
+                        href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes" target="_blank">ICI</a>.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <div class="slide-title">Les animations</div>
+            <div class="long-text">Quelques exemples d'animations.</div>
+            <div class="g2-2">
+                <div class="hover-example">
+                    :hover
+                </div>
+                <div>
+                    <input type="checkbox" name="transition-checked" id="transition-checked">
+                    <label for="transition-checked">:checked</label>
+                </div>
+                <div class="rotate-constant">
+                    Constant
+                </div>
+                <div id="fill-me-correctly-div">
+                    <label for="fill-me-correctly">Entre une adresse email valide</label>
+                    <input type="email" name="fill-me-correctly" id="fill-me-correctly">
+                    <p>Cette adresse est correcte !</p>
+                </div>
+            </div>
+        </article>
+
+        <aside class="hidden">
+            <!-- Hidden code, will be used later in the presentation -->
+            <ul id="tree">
+                <!-- Html as a tree, for a latter use -->
                 <li>!DOCTYPE html</li>
                 <li><span class="caret">html lang</span>
                     <ul class="nested">
@@ -152,7 +618,8 @@
             </code></pre>
         </aside>
     </main>
-    <footer> <!-- Navigation button -->
+    <footer>
+        <!-- Navigation button -->
         <nav>
             <i class="material-icons" id="start_btn">skip_previous</i>
             <i class="material-icons" id="prev_btn">navigate_before</i>
@@ -160,13 +627,13 @@
             <i class="material-icons" id="end_btn">skip_next</i>
         </nav>
     </footer>
-    
+
     <script> // Code for the tree
         var toggler = document.getElementsByClassName("caret");
         var i;
-        
+
         for (i = 0; i < toggler.length; i++) {
-            toggler[i].addEventListener("click", function() {
+            toggler[i].addEventListener("click", function () {
                 this.parentElement.querySelector(".nested").classList.toggle("active");
                 this.classList.toggle("caret-down");
             });
@@ -175,4 +642,5 @@
     <script>hljs.initHighlightingOnLoad();</script> <!-- Syntax coloration -->
     <script src="script.js"></script> <!-- Navigation script -->
 </body>
+
 </html>

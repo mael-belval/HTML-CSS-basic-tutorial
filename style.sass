@@ -72,6 +72,120 @@ main
         background-color: #fff
         margin: auto
 
+        .slide-title
+            margin: 80px 30px auto
+            // font-family: Google Fonts, museo sans
+            font-size: 30px
+            font-weight: 700
+        .long-text
+            margin: 30px 70px auto
+            text-align: justify
+            // font-family: museo sans
+
+            .thin
+                padding: 10px
+                border: 2px solid green
+                margin: 0px 100px auto
+
+                img
+                    float: right
+                    margin: 0 0 1em 1em
+            
+            .clearfix 
+                overflow: auto
+                border: 4px solid green    
+                nav
+                    float: left
+                    width: 200px
+                    border: 4px solid pink
+                
+                section 
+                    margin-left: 200px
+                    border: 4px solid yellow
+                
+                img
+                    float: right
+                    width: 50%
+            .container
+                overflow: auto
+                border: 4px solid green
+                nav 
+                    float: left
+                    width: 25%
+                section 
+                margin-left: 25%
+                
+
+            .relative1
+                position: relative
+
+            .relative2
+                position: relative
+                top: -30px
+                left: 30px
+                background-color: white
+                width: 500px
+            .fixed 
+                position: fixed
+                bottom: 0
+                right: 0
+                width: 200px
+                background-color: white
+            .relative 
+                position: relative
+                width: 600px
+                height: 200px
+            .absolute 
+                position: absolute
+                bottom: 0
+                right: 0
+                width: 300px
+                height: 100px
+
+            .code_title
+                background: burlywood
+            code
+                background: #cfcfcf
+
+        .g2-2
+            display: grid
+            grid-template-columns: 1fr 1fr
+
+            div
+                text-align: center
+                height: 5rem
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all 0.5s
+
+            div, label
+                transition: all 0.5s
+
+            .hover-example:hover
+                font-size: 200%
+
+            input#transition-checked:checked ~ label
+                transform: rotate(180deg)
+
+            .rotate-constant
+                animation-iteration-count: infinite
+                animation-duration: 3s
+                animation-name: turnarround
+                animation-timing-function: linear
+
+            #fill-me-correctly-div
+                display: block
+
+            input#fill-me-correctly ~ p
+                transition: all 0.5s
+                opacity: 0
+
+            input#fill-me-correctly:valid ~ p
+                opacity: 1
+
+        
+
 footer
     width: 100%
     position: absolute
@@ -93,7 +207,7 @@ footer
 
     margin: 0
     padding: 0
-  
+
     .caret
         cursor: pointer
         user-select: none
@@ -112,3 +226,10 @@ footer
 
     .active
         display: block
+
+@keyframes turnarround
+    0%
+        transform: rotateY(0deg)
+    100%
+        transform: rotateY(360deg)
+        
