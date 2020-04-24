@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="normalize.css"> <!-- Classic normalize for lazy CSS -->
     <link rel="stylesheet" href="style.css"> <!-- Generated CSS -->
     <title>Exposé SI28 - HTML/CSS</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
     <!-- Syntax coloration style -->
     <link rel="stylesheet" href="https://use.typekit.net/jvx6bxh.css"> <!-- Custom font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Navigation icons -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
     <!-- Syntax coloration script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- JQuery for lazy JS -->
@@ -302,7 +304,10 @@
                 </pre>
                 <div class="relative" style="border: 4px solid green;">
                     <code class="code_title">&lt;div class=&quot;relative&quot;&gt;</code><br>
-                    Cet élément est positionné en relative. S'il était positionné en <code>position: static;</code> son élément
+
+                    Cet élément est positionné en relative. S'il était positionné en <code>position: static;</code> son
+                    élément
+
                     enfant positionné en absolute s'échapperait et serait positionné de manière relative au corps du
                     document.
                     <div class="absolute" style="border: 4px solid purple;">
@@ -310,8 +315,108 @@
                         Cet élément est positionné en absolute. Sa position est relative à son parent.
                     </div>
                 </div>
-                
 
+            </div>
+        </article>
+
+        <article>
+            <div class="slide-title">float</div>
+            <div class="long-text">
+                <p>Une autre propriété CSS utilisée pour la mise en page est float.
+                    Float est prévu pour entourer une image avec du texte, comme ceci :
+                </p>
+
+                <pre>
+                    img {
+                        float: right;
+                        margin: 0 0 1em 1em;
+                    }
+                </pre>
+                <p class="thin">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQT_pmvrfR4g_-QH-Lh7fISrW0qisAp42Ge25HTbG2GaT8FGQXs&usqp=CAU"
+                        alt="image">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore architecto expedita a ipsam ducimus
+                    nihil hic asperiores accusantium ullam doloremque quisquam tempora modi, sunt dolore corporis totam
+                    esse, assumenda nisi. <br>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus repellendus animi nobis sed
+                    debitis pariatur nam itaque similique, blanditiis, id nostrum vero nihil, quis natus magnam expedita
+                    harum quibusdam aspernatur?<br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus architecto odio amet rem
+                    provident ducimus reprehenderit reiciendis accusantium facere molestiae culpa nulla, laboriosam
+                    debitis placeat corporis voluptas, qui mollitia magnam! <br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, eaque neque! Perferendis totam, illo
+                    magnam, sunt obcaecati, molestias repellendus voluptates possimus aut dolores quasi nemo. Excepturi
+                    amet odio sapiente incidunt.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">exemple de mise en page avec float</div>
+            <div class="long-text">
+                <p>C'est très courant de faire des mise en page entières en utilisant float. Voici une mise en page
+                    en utilisant float.
+                </p>
+                <pre>
+                    .clearfix {
+                        overflow: auto;
+                    }
+                    nav {
+                        float: left;
+                        width: 200px;
+                    }
+                    section {
+                        margin-left: 200px;
+                    }
+                </pre>
+                <code class="code_title"
+                    style="background: rgb(134, 208, 134);">&lt;div class=&quot;clearfix&quot;&gt;</code><br>
+                <div class="clearfix">
+                    <nav>
+                        <code class="code_title" style="background: pink;">&lt;nav&gt;</code><br>
+                        <li> <a href="http://papertoilet.com/" target="_blank">Gérer ses comptes</a> </li>
+                        <li> <a href="https://play2048.co/" target="_blank">Empunter</a></li>
+                        <li> <a href="http://radio.garden/visit/paris/B7DS4V1m">Assurer et sécuriser</a></li>
+                        <li> <a href="https://29a.ch/sandbox/2011/neonflames/">Épargner</a></li>
+                        <li> <a href="https://www.mapcrunch.com/">Nous contacter</a></li>
+                    </nav>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Remarquez que nous avons mis un clearfix sur le
+                        conteneur. Ce n'est pas nécessaire dans cet exemple, mais ça le serait si la <code>nav</code>
+                        était plus
+                        longue que le contenu non flottant
+                    </section>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae quidem reiciendis eum
+                        id! Nihil corporis eveniet reiciendis veniam dolorum ratione necessitatibus corrupti aperiam
+                        eligendi dolore nesciunt, soluta obcaecati aut.
+                    </section>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="slide-title">Largeur en pourcent</div>
+            <div class="long-text">
+                <p>
+                    Le pourcent est une unité de mesure relative au block conteneur. C'est génial pour les images : ici
+                    nous avons une image qui a toujours 50% de la largeur de son conteneur. Essayez de réduire la taille
+                    de la page pour voir.
+                </p>
+                <pre>
+                    clearfix img {
+                        float: right;
+                        width: 50%;
+                    }
+                </pre>
+                <code class="code_title"
+                    style="background: rgb(134, 208, 134);">&lt;div class=&quot;clearfix&quot;&gt;</code><br>
+                <div class="clearfix">
+                    <img src="https://www.peta.org/wp-content/uploads/2017/11/iStock-805170532_absolutimages-668x336.jpg?20190103112626"
+                        alt="a cat">
+                    Vous pouvez même utiliser min-width et max-width pour limiter la largeur maximale ou minimale de
+                    l'image.
+                </div>
             </div>
         </article>
 
@@ -355,6 +460,90 @@
         </article>
 
         <article>
+            <div class="slide-title">mise en page avec une largeur en pourcent</div>
+            <div class="long-text">
+                <p>Vous pouvez utiliser le pourcent pour votre mise en page, mais cela peut demander un peu de travail.
+                    Dans cet exemple, le contenu de la nav s'agence de manière désagréable quand la fenêtre est trop
+                    étroite. Cela se réduit à ce qui marche le mieux pour votre contenu.
+                </p>
+                <pre>
+                    nav {
+                        float: left;
+                        width: 25%;
+                    }
+                    section {
+                        margin-left: 25%;
+                    }
+                </pre>
+                <code class="code_title"
+                    style="background: rgb(134, 208, 134);">&lt;div class=&quot;container&quot;&gt;</code><br>
+                <div class="clearfix">
+                    <nav>
+                        <code class="code_title" style="background: pink;">&lt;nav&gt;</code><br>
+                        <li> <a href="http://papertoilet.com/" target="_blank">Gérer ses comptes</a> </li>
+                        <li> <a href="https://play2048.co/" target="_blank">Empunter</a></li>
+                        <li> <a href="http://radio.garden/visit/paris/B7DS4V1m">Assurer et sécuriser</a></li>
+                        <li> <a href="https://29a.ch/sandbox/2011/neonflames/">Épargner</a></li>
+                        <li> <a href="https://www.mapcrunch.com/">Nous contacter</a></li>
+                    </nav>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Quand cette mise en page est trop étroite, la nav est écrasée. Pire, vous ne pouvez pas utiliser
+                        <code>min-width</code> sur la nav pour empêcher cela, parce que la colonne de droite ne le respecterait pas.
+                    </section>
+                    <section>
+                        <code class="code_title" style="background: yellow;">&lt;section&gt;</code><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae quidem reiciendis eum
+                        id! Nihil corporis eveniet reiciendis veniam dolorum ratione necessitatibus corrupti aperiam
+                        eligendi dolore nesciunt, soluta obcaecati aut.
+                    </section>
+                </div>
+            </div>
+        </article>
+
+
+        <article>
+            <div class="slide-title">Les sélecteurs CSS</div>
+            <div class="long-text">
+                <p>
+                    Il existe de nombreux sélecteurs en CSS, parmis ceux-là, on retrouve des sélecteurs très
+                    spécifiques,
+                    tels les sélecteurs de voisins directs.
+                </p>
+                <p>
+                    <code>div + .voisin</code> correspondra à tout les éléments avec
+                    la classe <code>voisin</code> suivant directement un <code>div</code>.
+                </p>
+                <p>
+                    <code>div ~ .voisins</code> correspondra à tout les éléments avec
+                    la classe <code>voisins</code> suivant directement <u>ou non</u> un <code>div</code>.
+                </p>
+                <p>
+                    <code>div > .fils</code> correspondra à tout les fils directs de <code>div</code> avec
+                    la classe <code>fils</code>.
+                </p>
+                <p>
+                    <code>div .fils</code> correspondra à tout les fils directs <u>ou non</u> de <code>div</code> avec
+                    la classe <code>fils</code>.
+                </p>
+                <p>
+                    <code>div:first-child</code> sélectionnera le premier enfant de <code>div</code>.
+                </p>
+                <p>
+                    <code>:empty</code> sélectionnera tout les éléments sans enfants.
+                </p>
+                <p>
+                    <code>:checked</code> sélectionnera tout les éléments "cochés" (<code>checkbox</code>,
+                    <code>radio</code>, <code>option</code> d'un <code>select</code>)
+                </p>
+                <p>
+                    Et bien plus encore. Vous pouvez les retrouver tous <a
+                        href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes" target="_blank">ICI</a>.
+                </p>
+            </div>
+        </article>
+
+        <article>
             <div class="slide-title">Les animations</div>
             <div class="long-text">Quelques exemples d'animations.</div>
             <div class="g2-2">
@@ -375,6 +564,7 @@
                 </div>
             </div>
         </article>
+
 
         <aside class="hidden">
             <!-- Hidden code, will be used later in the presentation -->
