@@ -56,12 +56,30 @@
         </nav>
     </header>
     <main>
+        <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
+        <article>
+            <div class="slide-title">Fonctionnement de ce site</div>
+            <div class="long-text">
+                <p>
+                    Ce site fonctionnne comme un diaporama interactif. Vous pouvez intéragir avec certaines slides avec votre souris.
+                    Attention : Ce site n'est pas pensé pour mobile.
+                    Pour naviguer entre les slides vous pouvez utiliser les flèches gauches et droites de votre clavier, la barre espace,
+                    ou cliquer sur les boutons en bas de page. Il est également possible de se déplacer via le menu en haut à droite.
+                </p>
+                <p>
+                    Le code source de ce site est accessible sur sa page github liée accessible à cette adresse :
+                    <a href="https://github.com/mael-belval/HTML-CSS-basic-tutorial">https://github.com/mael-belval/HTML-CSS-basic-tutorial</a>.<br>
+                    N'hésitez pas à aller y mettre des étoiles, et soumettre d'éventuelles <i>issues</i>.
+                </p>
+            </div>
+        </article>
+
         <article id='first-slide'>
             <div class="slide-title">Vidéo introductive</div>
             <iframe width="896" height="504" src="https://www.youtube-nocookie.com/embed/qGAefhKsoSs" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>
-        <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
+
         <article>
             <div class="slide-title">La petite histoire du HTML</div>
             <div class="long-text">
@@ -105,6 +123,121 @@
                     informaticiens préfèrent s'atteler au XHTML et oublient le HTML. Ce n'est qu'en mars 2007 que la W3C
                     décide de relancer le développement du html, avec à la tête des recherches Chris Wilson (Microsoft).
                 </p>
+            </div>
+        </article>
+        
+        <article>
+            <div class="slide-title">Le HTML est structuré sous forme d'arbre, structure basique d'une page HTML5</div>
+            <div class="g2-2">
+                <div class="not-align">
+                    <ul id="tree">
+                        <!-- Html as a tree, for a latter use -->
+                        <li>!DOCTYPE html</li>
+                        <li><span class="caret">html lang</span>
+                            <ul class="nested">
+                                <li><span class="caret">head</span>
+                                    <ul class="nested">
+                                        <li>meta charset</li>
+                                        <li>meta viewport</li>
+                                        <li>link stylesheet</li>
+                                        <li>title</li>
+                                    </ul>
+                                </li>
+                                <li><span class="caret">body</span>
+                                    <ul class="nested">
+                                        <li><span class="caret">header</span>
+                                            <ul class="nested">
+                                                <li>h1</li>
+                                                <li><span class="caret">nav</span>
+                                                    <ul class="nested">
+                                                        <li>li</li>
+                                                        <li>...</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="caret">main</span>
+                                            <ul class="nested">
+                                                <li><span class="caret">article</span>
+                                                    <ul class="nested">
+                                                        <li>section</li>
+                                                        <li>...</li>
+                                                    </ul>
+                                                </li>
+                                                <li>aside</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="caret">footer</span>
+                                            <ul class="nested">
+                                                <li><span class="caret">nav</span>
+                                                    <ul class="nested">
+                                                        <li>li</li>
+                                                        <li>...</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="not-align"> <!-- HTML5 template formatted code -->
+                    <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;header&gt;Titre de la page&lt;/header&gt;
+            &lt;nav&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+            &lt;article&gt;
+                &lt;section&gt;
+                &lt;/section&gt;
+                &lt;section&gt;
+                &lt;/section&gt;
+            &lt;/article&gt;
+            &lt;aside&gt;
+            &lt;/aside&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;nav&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+            &lt;/nav&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="slide-title">Les balises HTML</div>
+            <div class="long-text">
+                <p>La plupart des balises sont en deux parties : ouvrantes et fermantes. Elles peuvent alors avoie des enfants pour descendre
+                    dans l'arborescence.<br>
+                    Exempe de la balise paragraphe:
+                    <pre><code class="html">&lt;p&gt;&lt;/p&gt;</code></pre>
+                    Certaines balises sont dites auto-fermantes, une balise ouvrante suffit. Ces dernières n'ont alors pas d'enfants.<br>
+                    Exemple de la balise de retour à la ligne (à mettre dans un paragraphe) :
+                    <pre><code class="html">&lt;br&gt; ou &lt;br /&gt; (Les deux écritures sont possibles)</code></pre>
+                </p>
+                <p>Vous trouverez en cliquant sur
+                    <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html">ce lien</a>
+                    un memento des principales balises HTML.</p>
             </div>
         </article>
 
@@ -509,7 +642,9 @@
 
         <article>
             <div class="slide-title">Les animations</div>
-            <div class="long-text">Quelques exemples d'animations.</div>
+            <div class="long-text">Quelques exemples d'animations. Les divs contenant ces examples ont toutes la règle CSS suivante :
+                <pre><code class="css">transition: all 0.5s;</code></pre>
+            </div>
             <div class="g2-2">
                 <div class="hover-example">
                     :hover
@@ -527,106 +662,35 @@
                     <p>Cette adresse est correcte !</p>
                 </div>
             </div>
+            <div class="g2-2 long-text">
+                <div class="not-align">
+                    <p>Code hover :</p>
+                    <pre><code class="css">.hover-example:hover { font-size: 200%; }</code></pre>
+                </div>
+                <div class="not-align">
+                    <p>Code checked :</p>
+                    <pre><code class="css">input#transition-checked:checked ~ label {
+    transform: rotate(180deg); }</code></pre>
+                </div>
+                <div class="not-align">
+                    <p>Code constant :</p>
+                    <pre><code class="css">.rotate-constant{
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-name: turnarround;
+    animation-timing-function: linear;}
+@keyframes turnarround{
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+}</code></pre>
+                </div>
+                <div class="not-align"><br><br><br>
+                    <p>Code email :</p>
+                    <pre><code class="css">input#fill-me-correctly ~ p {opacity: 0;}
+input#fill-me-correctly:valid ~ p {opacity: 1;}</code></pre>
+                </div>
+            </div>
         </article>
-
-
-        <aside class="hidden">
-            <!-- Hidden code, will be used later in the presentation -->
-            <ul id="tree">
-                <!-- Html as a tree, for a latter use -->
-                <li>!DOCTYPE html</li>
-                <li><span class="caret">html lang</span>
-                    <ul class="nested">
-                        <li><span class="caret">head</span>
-                            <ul class="nested">
-                                <li>meta charset</li>
-                                <li>meta viewport</li>
-                                <li>link stylesheet</li>
-                                <li>title</li>
-                            </ul>
-                        </li>
-                        <li><span class="caret">body</span>
-                            <ul class="nested">
-                                <li><span class="caret">header</span>
-                                    <ul class="nested">
-                                        <li>h1</li>
-                                        <li><span class="caret">nav</span>
-                                            <ul class="nested">
-                                                <li>li</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><span class="caret">main</span>
-                                    <ul class="nested">
-                                        <li><span class="caret">article</span>
-                                            <ul class="nested">
-                                                <li>section</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </li>
-                                        <li>aside</li>
-                                    </ul>
-                                </li>
-                                <li><span class="caret">footer</span>
-                                    <ul class="nested">
-                                        <li><span class="caret">nav</span>
-                                            <ul class="nested">
-                                                <li>li</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-
-            <pre><code class="html"> <!-- HTML5 template formatted code -->
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;fr&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;header&gt;
-            &lt;header&gt;Titre de la page&lt;/header&gt;
-            &lt;nav&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-            &lt;/nav&gt;
-        &lt;/header&gt;
-        &lt;main&gt;
-            &lt;article&gt;
-                &lt;section&gt;
-
-                &lt;/section&gt;
-                &lt;section&gt;
-
-                &lt;/section&gt;
-            &lt;/article&gt;
-            &lt;aside&gt;
-
-            &lt;/aside&gt;
-        &lt;/main&gt;
-        &lt;footer&gt;
-            &lt;nav&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-            &lt;/nav&gt;
-        &lt;/footer&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-            </code></pre>
-        </aside>
     </main>
     <footer>
         <!-- Navigation button -->
