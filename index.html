@@ -642,7 +642,9 @@
 
         <article>
             <div class="slide-title">Les animations</div>
-            <div class="long-text">Quelques exemples d'animations.</div>
+            <div class="long-text">Quelques exemples d'animations. Les divs contenant ces examples ont toutes la règle CSS suivante :
+                <pre><code class="css">transition: all 0.5s;</code></pre>
+            </div>
             <div class="g2-2">
                 <div class="hover-example">
                     :hover
@@ -658,6 +660,34 @@
                     <label for="fill-me-correctly">Entre une adresse email valide</label>
                     <input type="email" name="fill-me-correctly" id="fill-me-correctly">
                     <p>Cette adresse est correcte !</p>
+                </div>
+            </div>
+            <div class="g2-2 long-text">
+                <div class="not-align">
+                    <p>Code hover :</p>
+                    <pre><code class="css">.hover-example:hover { font-size: 200%; }</code></pre>
+                </div>
+                <div class="not-align">
+                    <p>Code checked :</p>
+                    <pre><code class="css">input#transition-checked:checked ~ label {
+    transform: rotate(180deg); }</code></pre>
+                </div>
+                <div class="not-align">
+                    <p>Code constant :</p>
+                    <pre><code class="css">.rotate-constant{
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-name: turnarround;
+    animation-timing-function: linear;}
+@keyframes turnarround{
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+}</code></pre>
+                </div>
+                <div class="not-align"><br><br><br>
+                    <p>Code email :</p>
+                    <pre><code class="css">input#fill-me-correctly ~ p {opacity: 0;}
+input#fill-me-correctly:valid ~ p {opacity: 1;}</code></pre>
                 </div>
             </div>
         </article>
