@@ -165,6 +165,11 @@ main
                 align-items: center
                 transition: all 0.5s
 
+            div.not-align
+                text-align: left
+                justify-content: start
+                align-items: start
+
             div, label
                 transition: all 0.5s
 
@@ -208,10 +213,11 @@ footer
         cursor: pointer
 
 #tree
-    ul, #tree
+    list-style-type: none
+    ul
         list-style-type: none
 
-    margin: 0
+    margin: 30px 30px auto
     padding: 0
 
     .caret
@@ -232,6 +238,10 @@ footer
 
     .active
         display: block
+
+.html
+    font-size: 0.9rem
+    margin-right: 30px
 
 @keyframes turnarround
     0%

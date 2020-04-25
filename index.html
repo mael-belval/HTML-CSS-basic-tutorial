@@ -56,12 +56,111 @@
         </nav>
     </header>
     <main>
+        <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
         <article id='first-slide'>
             <div class="slide-title">Vidéo introductive</div>
             <iframe width="896" height="504" src="https://www.youtube-nocookie.com/embed/qGAefhKsoSs" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>
-        <!-- Each article is a slide, add a specific class or id to create css for a specific slide -->
+        
+        <article>
+            <div class="slide-title">Le HTML est structuré sous forme d'arbre, structure basique d'une page HTML5</div>
+            <div class="g2-2">
+                <div class="not-align">
+                    <ul id="tree">
+                        <!-- Html as a tree, for a latter use -->
+                        <li>!DOCTYPE html</li>
+                        <li><span class="caret">html lang</span>
+                            <ul class="nested">
+                                <li><span class="caret">head</span>
+                                    <ul class="nested">
+                                        <li>meta charset</li>
+                                        <li>meta viewport</li>
+                                        <li>link stylesheet</li>
+                                        <li>title</li>
+                                    </ul>
+                                </li>
+                                <li><span class="caret">body</span>
+                                    <ul class="nested">
+                                        <li><span class="caret">header</span>
+                                            <ul class="nested">
+                                                <li>h1</li>
+                                                <li><span class="caret">nav</span>
+                                                    <ul class="nested">
+                                                        <li>li</li>
+                                                        <li>...</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="caret">main</span>
+                                            <ul class="nested">
+                                                <li><span class="caret">article</span>
+                                                    <ul class="nested">
+                                                        <li>section</li>
+                                                        <li>...</li>
+                                                    </ul>
+                                                </li>
+                                                <li>aside</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="caret">footer</span>
+                                            <ul class="nested">
+                                                <li><span class="caret">nav</span>
+                                                    <ul class="nested">
+                                                        <li>li</li>
+                                                        <li>...</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="not-align"> <!-- HTML5 template formatted code -->
+                    <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;header&gt;Titre de la page&lt;/header&gt;
+            &lt;nav&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+            &lt;article&gt;
+                &lt;section&gt;
+                &lt;/section&gt;
+                &lt;section&gt;
+                &lt;/section&gt;
+            &lt;/article&gt;
+            &lt;aside&gt;
+            &lt;/aside&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;nav&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+                &lt;li&gt;lien&lt;/li&gt;
+            &lt;/nav&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+            </div>
+        </article>
+
         <article>
             <div class="slide-title">La petite histoire du HTML</div>
             <div class="long-text">
@@ -528,105 +627,6 @@
                 </div>
             </div>
         </article>
-
-
-        <aside class="hidden">
-            <!-- Hidden code, will be used later in the presentation -->
-            <ul id="tree">
-                <!-- Html as a tree, for a latter use -->
-                <li>!DOCTYPE html</li>
-                <li><span class="caret">html lang</span>
-                    <ul class="nested">
-                        <li><span class="caret">head</span>
-                            <ul class="nested">
-                                <li>meta charset</li>
-                                <li>meta viewport</li>
-                                <li>link stylesheet</li>
-                                <li>title</li>
-                            </ul>
-                        </li>
-                        <li><span class="caret">body</span>
-                            <ul class="nested">
-                                <li><span class="caret">header</span>
-                                    <ul class="nested">
-                                        <li>h1</li>
-                                        <li><span class="caret">nav</span>
-                                            <ul class="nested">
-                                                <li>li</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><span class="caret">main</span>
-                                    <ul class="nested">
-                                        <li><span class="caret">article</span>
-                                            <ul class="nested">
-                                                <li>section</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </li>
-                                        <li>aside</li>
-                                    </ul>
-                                </li>
-                                <li><span class="caret">footer</span>
-                                    <ul class="nested">
-                                        <li><span class="caret">nav</span>
-                                            <ul class="nested">
-                                                <li>li</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-
-            <pre><code class="html"> <!-- HTML5 template formatted code -->
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;fr&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;header&gt;
-            &lt;header&gt;Titre de la page&lt;/header&gt;
-            &lt;nav&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-            &lt;/nav&gt;
-        &lt;/header&gt;
-        &lt;main&gt;
-            &lt;article&gt;
-                &lt;section&gt;
-
-                &lt;/section&gt;
-                &lt;section&gt;
-
-                &lt;/section&gt;
-            &lt;/article&gt;
-            &lt;aside&gt;
-
-            &lt;/aside&gt;
-        &lt;/main&gt;
-        &lt;footer&gt;
-            &lt;nav&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-                &lt;li&gt;lien&lt;/li&gt;
-            &lt;/nav&gt;
-        &lt;/footer&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-            </code></pre>
-        </aside>
     </main>
     <footer>
         <!-- Navigation button -->
