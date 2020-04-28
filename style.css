@@ -85,7 +85,7 @@ main {
   display: flex;
 }
 
-main #first-slide {
+main .first-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,7 +95,7 @@ main #first-slide {
           flex-direction: column;
 }
 
-main #first-slide iframe {
+main .first-slide iframe {
   margin: auto;
 }
 
