@@ -12,7 +12,14 @@ $(function() {
     $("#prev_btn").click(prevSlide)
     $("#next_btn").click(nextSlide)
     $("#end_btn").click(lastSlide)
+
+    $("header li").click(navClick)
 })
+
+function navClick() {
+    if($(this).attr("class") !== undefined)
+        switchSlide($(".slide-active"), $("#" + $(this).attr("class")))
+}
 
 function nextSlide() { // Hide the current slide and show the next
     var oldSlide = $(".slide-active")
